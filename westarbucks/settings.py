@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'westarbucks.wsgi.application'
 from . import my_settings
 
 DATABASES = my_settings.DATABASES
-
+# 상대경로 이용
 
 AUTH_PASSWORD_VALIDATORS = [
     {

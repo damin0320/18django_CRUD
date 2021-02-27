@@ -125,7 +125,7 @@ class NutritionView(View):
 class AllergyDrinkView(View):
     def get(self, request):
         allergies = Allergy_drink.objects.all()
-        result = []
+        result    = []
         
         for allergy in allergies:
             my_dict={
@@ -140,7 +140,7 @@ class AllergyDrinkView(View):
         data  = json.loads(request.body)
         name  = Allergy.objects.get(name=data['allergy_drink'])
         #가져오려는 클래스가 Allergy였으므로 name이 맞고 데이터 상에는 'allery_drink'니까
-        drink = Drink.objects.get(korean_name=data['drink'])
+        drink         = Drink.objects.get(korean_name=data['drink'])
         allergy_drink = Allergy_drink.objects.create(
             allergy_drink = name,
             drink         = drink
